@@ -4,18 +4,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-       print(11)
-//        if let userActivity = scene.userActivity { // <-- not quite
-//            self.scene(scene, continue: userActivity)
-//        }
-
         guard let userActivity
             = connectionOptions.userActivities
                 .first(where: { $0.webpageURL != nil }) else { return }
-        print(userActivity.webpageURL!)
-
-        scene.delegate = self
-
+        print("willConnectTo:\(userActivity.webpageURL)" )
     }
 
     func scene(_ scene: UIScene, willContinueUserActivityWithType userActivityType: String) {

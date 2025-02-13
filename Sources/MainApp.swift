@@ -7,9 +7,6 @@ struct MainApp: App {
     var body: some Scene {
         WindowGroup {
             RootView()
-                .onOpenURL(perform: { (universalLink: URL) in
-                    print(11)
-                })
         }
     }
 }

@@ -1,5 +1,6 @@
 import SwiftUI
 
+@MainActor
 protocol SwiftUICoordinator: ObservableObject {
     associatedtype Route: Hashable
 

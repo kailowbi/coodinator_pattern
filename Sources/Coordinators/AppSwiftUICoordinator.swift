@@ -20,7 +20,6 @@ enum AppRoute: Hashable, Identifiable {
     }
 }
 
-@MainActor
 final class AppSwiftUICoordinator: SwiftUICoordinator {
     @Published var path = NavigationPath()
     @Published var sheet: AppRoute?
