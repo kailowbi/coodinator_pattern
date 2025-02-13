@@ -7,7 +7,6 @@ options:
 
 settings:
   base:
-    DEVELOPMENT_TEAM: T33NHY384Q
     SWIFT_VERSION: 5.0
 
 targets:
@@ -22,9 +21,8 @@ targets:
     settings:
       base:
         INFOPLIST_FILE: Sources/Info.plist
-        PRODUCT_BUNDLE_IDENTIFIER: jp.co.paperboy.Suzuri.test
+        PRODUCT_BUNDLE_IDENTIFIER: test.test
         TARGETED_DEVICE_FAMILY: 1,2
-        DEVELOPMENT_TEAM: T33NHY384Q
         CODE_SIGN_STYLE: Automatic
     info:
       path: Sources/Info.plist

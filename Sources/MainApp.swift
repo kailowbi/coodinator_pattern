@@ -10,12 +10,7 @@ struct MainApp: App {
                 .onOpenURL(perform: { (universalLink: URL) in
                     print(11)
                 })
-                .onContinueUserActivity(NSUserActivityTypeBrowsingWeb) { userActivity in
-                    guard let url = userActivity.webpageURL else {
-                        return
-                    }
-                }
-                    
         }
     }
 }
+
