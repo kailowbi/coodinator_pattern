@@ -1,19 +1,22 @@
 import SwiftUI
 
 struct RootView: View {
-    @StateObject private var coordinator = AppSwiftUICoordinator()
+    @ObservedObject var coordinator: AppSwiftUICoordinator
 
     var body: some View {
-        NavigationStack(path: $coordinator.path) {
+        NavigationStack(path: Binding(get: { coordinator.path },
+                                      set: { coordinator.path = $0 })) {
             coordinator.coordinateToView(for: .main)
                 .navigationDestination(for: AppRoute.self) { route in
                     coordinator.coordinateToView(for: route)
                 }
         }
-        .sheet(item: $coordinator.sheet) { route in
+        .sheet(item: Binding(get: { coordinator.sheet },
+                             set: { coordinator.sheet = $0 })) { route in
             coordinator.coordinateToView(for: route)
         }
-        .fullScreenCover(item: $coordinator.fullScreenCover) { route in
+        .fullScreenCover(item: Binding(get: { coordinator.fullScreenCover },
+                                       set: { coordinator.fullScreenCover = $0 })) { route in
             coordinator.coordinateToView(for: route)
         }
         .onOpenURL(perform: { url in
@@ -23,6 +26,8 @@ struct RootView: View {
 }
 
 enum LaunchType {
+    typealias UserInfo = [AnyHashable : Any]
+
     case normal
     case notification
     case univasalLink

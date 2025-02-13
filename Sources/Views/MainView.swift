@@ -11,6 +11,10 @@ struct MainView: View {
             Button("Show Detail") {
                 coordinator.push(.detail(id: UUID()))
             }
+            
+            Button("Show Notifications") {
+                coordinator.present(sheet: .notifications)
+            }
 
             Button("Show Settings") {
                 coordinator.present(sheet: .settings)

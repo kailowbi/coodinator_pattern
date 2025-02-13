@@ -5,6 +5,7 @@ enum AppRoute: Hashable, Identifiable {
     case detail(id: UUID)
     case settings
     case profile
+    case notifications
 
     var id: String {
         switch self {
@@ -16,14 +17,24 @@ enum AppRoute: Hashable, Identifiable {
             return "settings"
         case .profile:
             return "profile"
+        case .notifications:
+            return "notifications"
         }
     }
 }
 
 final class AppSwiftUICoordinator: SwiftUICoordinator {
+    static let shared = AppSwiftUICoordinator()
+    
     @Published var path = NavigationPath()
     @Published var sheet: AppRoute?
     @Published var fullScreenCover: AppRoute?
+    
+    private init(path: NavigationPath = NavigationPath(), sheet: AppRoute? = nil, fullScreenCover: AppRoute? = nil) {
+        self.path = path
+        self.sheet = sheet
+        self.fullScreenCover = fullScreenCover
+    }
 
     func coordinateToView(for route: AppRoute) -> some View {
         VStack(){
@@ -36,6 +47,8 @@ final class AppSwiftUICoordinator: SwiftUICoordinator {
                 SettingsView(coordinator: self)
             case .profile:
                 ProfileView(coordinator: self)
+            case .notifications:
+                NotificationsView(coordinator: self)
             }
         }
     }
