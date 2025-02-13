@@ -1,0 +1,58 @@
+name: UniversalLinkAppsFlyer
+options:
+  bundleIdPrefix: jp.co.paperboy
+  deploymentTarget:
+    iOS: 16.0
+  xcodeVersion: "15.0"
+
+settings:
+  base:
+    DEVELOPMENT_TEAM: T33NHY384Q
+    SWIFT_VERSION: 5.0
+
+targets:
+  UniversalLinkAppsFlyer:
+    type: application
+    platform: iOS
+    deploymentTarget: "16.0"
+    sources:
+      - path: univasallink_appsflyer
+        excludes:
+          - "**/.DS_Store"
+    settings:
+      base:
+        INFOPLIST_FILE: univasallink_appsflyer/Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: jp.co.paperboy.Suzuri.test
+        TARGETED_DEVICE_FAMILY: 1,2
+        DEVELOPMENT_TEAM: T33NHY384Q
+        CODE_SIGN_STYLE: Automatic
+    info:
+      path: univasallink_appsflyer/Info.plist
+      properties:
+        CFBundleDisplayName: UniversalLinkAppsFlyer
+        LSRequiresIPhoneOS: true
+        UILaunchStoryboardName: LaunchScreen
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: false
+          UISceneConfigurations:
+            UIWindowSceneSessionRoleApplication:
+              - UISceneConfigurationName: Default Configuration
+                UISceneDelegateClassName: $(PRODUCT_MODULE_NAME).SceneDelegate
+
+schemes:
+  UniversalLinkAppsFlyer:
+    build:
+      targets:
+        UniversalLinkAppsFlyer: all
+    run:
+      config: Debug
+    test:
+      config: Debug
+    profile:
+      config: Release
+    analyze:
+      config: Debug
+    archive:
+      config: Release
