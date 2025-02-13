@@ -15,10 +15,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "11CCB22DFF447351AE359452"
-               BuildableName = "UniversalLinkAppsFlyer.app"
-               BlueprintName = "UniversalLinkAppsFlyer"
-               ReferencedContainer = "container:UniversalLinkAppsFlyer.xcodeproj">
+               BlueprintIdentifier = "A6FEEAE8040BFED8A4988193"
+               BuildableName = "CoordinatorPattern.app"
+               BlueprintName = "CoordinatorPattern"
+               ReferencedContainer = "container:CoordinatorPattern.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "11CCB22DFF447351AE359452"
-            BuildableName = "UniversalLinkAppsFlyer.app"
-            BlueprintName = "UniversalLinkAppsFlyer"
-            ReferencedContainer = "container:UniversalLinkAppsFlyer.xcodeproj">
+            BlueprintIdentifier = "A6FEEAE8040BFED8A4988193"
+            BuildableName = "CoordinatorPattern.app"
+            BlueprintName = "CoordinatorPattern"
+            ReferencedContainer = "container:CoordinatorPattern.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <Testables>
@@ -57,10 +57,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "11CCB22DFF447351AE359452"
-            BuildableName = "UniversalLinkAppsFlyer.app"
-            BlueprintName = "UniversalLinkAppsFlyer"
-            ReferencedContainer = "container:UniversalLinkAppsFlyer.xcodeproj">
+            BlueprintIdentifier = "A6FEEAE8040BFED8A4988193"
+            BuildableName = "CoordinatorPattern.app"
+            BlueprintName = "CoordinatorPattern"
+            ReferencedContainer = "container:CoordinatorPattern.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <CommandLineArguments>
@@ -76,10 +76,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "11CCB22DFF447351AE359452"
-            BuildableName = "UniversalLinkAppsFlyer.app"
-            BlueprintName = "UniversalLinkAppsFlyer"
-            ReferencedContainer = "container:UniversalLinkAppsFlyer.xcodeproj">
+            BlueprintIdentifier = "A6FEEAE8040BFED8A4988193"
+            BuildableName = "CoordinatorPattern.app"
+            BlueprintName = "CoordinatorPattern"
+            ReferencedContainer = "container:CoordinatorPattern.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <CommandLineArguments>
