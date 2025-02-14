@@ -1,13 +1,13 @@
 import UIKit
 
-class DetailViewController: UIViewController {
+class WatchListViewController: UIViewController {
 
     // MARK: - Properties
-    weak var coordinator: DetailCoordinator?
+    weak var coordinator: WatchListCoordinator?
 
     private let mainButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("詳細画面", for: .normal)
+        button.setTitle("詳細画面へ", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -21,11 +21,11 @@ class DetailViewController: UIViewController {
 
     // MARK: - Setup
     private func setupUI() {
-        title = "詳細画面"
+        title = "メイン画面"
         view.backgroundColor = .white
         view.addSubview(mainButton)
 
-        mainButton.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        mainButton.addTarget(self, action: #selector(mainButtonTapped), for: .touchUpInside)
     }
 
     private func setupConstraints() {
@@ -36,7 +36,7 @@ class DetailViewController: UIViewController {
     }
 
     // MARK: - Actions
-    @objc private func buttonTapped() {
-//        coordinator?.()
+    @objc private func mainButtonTapped() {
+        coordinator?.showDetail()
     }
 }

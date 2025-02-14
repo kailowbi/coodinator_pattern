@@ -11,7 +11,7 @@ struct MainView: View {
             Button("Show Detail") {
                 coordinator.push(.detail(id: UUID()))
             }
-            
+
             Button("Show Notifications") {
                 coordinator.present(sheet: .notifications)
             }
@@ -22,6 +22,10 @@ struct MainView: View {
 
             Button("Show Profile") {
                 coordinator.present(fullScreen: .profile)
+            }
+            
+            Button("Show VCView") {
+                coordinator.push(.watchlist)
             }
         }
     }

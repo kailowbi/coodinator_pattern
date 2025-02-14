@@ -14,7 +14,7 @@ class AppCoordinator: Coordinator {
     }
 
     private func showMain() {
-        let mainCoordinator = MainCoordinator(navigationController: navigationController)
+        let mainCoordinator = WatchListCoordinator(navigationController: navigationController)
         addChildCoordinator(mainCoordinator)
         mainCoordinator.start()
     }

@@ -1,6 +1,6 @@
 import UIKit
 
-class DetailCoordinator: Coordinator {
+class WatchDetailCoordinator: Coordinator {
     var childCoordinators: [Coordinator] = []
     var navigationController: UINavigationController
 
@@ -9,13 +9,13 @@ class DetailCoordinator: Coordinator {
     }
 
     func start() {
-       let viewController = DetailViewController()
+       let viewController = WatchDetailViewController()
        viewController.coordinator = self
-       navigationController.pushViewController(viewController, animated: false)
+       navigationController.pushViewController(viewController, animated: true)
     }
 
     func showDetail() {
-       let detailCoordinator = DetailCoordinator(navigationController: navigationController)
+       let detailCoordinator = WatchDetailCoordinator(navigationController: navigationController)
        addChildCoordinator(detailCoordinator)
        detailCoordinator.start()
     }
